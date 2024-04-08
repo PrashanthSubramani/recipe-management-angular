@@ -1,1 +1,65 @@
+@import "@fontsource/poppins"; 
+@import "@fontsource/poppins/400.css"; 
+@import "@fontsource/poppins/400-italic.css";
+
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+.vl {
+    border-left: 1px solid rgb(194, 194, 194);
+    height: 50px;
+  }
+
+body {
+    min-height: 100vh; /* Ensure body takes at least the height of the viewport */
+    background-color: #e3e3e4;
+    font-family: serif;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+}
+
+header{
+    background: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    margin-left: 50px;
+    margin-right:50px;
+}
+
+
+
+main {
+    background: #e3e3e4; /* Different color from header/footer */
+    flex: 5;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 0.1em 0;
+    text-align: center;
+}
+
+@media all and (max-width: 550px) {
+    .main {
+        flex-direction: column;
+    }
+    main {
+        padding: 5em 0;
+    }
+}

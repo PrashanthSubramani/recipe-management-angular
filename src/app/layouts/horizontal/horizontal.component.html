@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand text-decoration ms-4" href="#">
+        <h4 class="ms-5"> <i class="fa fa-free-code-camp" aria-hidden="true"></i> Logo</h4>
+    </a>
+
+    <div class="d-flex justify-content-between me-5">
+        <div class="p-2">
+            <i class="fa fa-bell"></i> &nbsp;
+            <i class="fa fa-moon-o"></i> &nbsp;
+        </div>
+        <div class="vl"></div>
+        <div class="p-2 me-1">
+            Username
+        </div>
+    </div>
+
+</nav>
+
+<app-horizontal-topbar></app-horizontal-topbar>
+    <div class="main">
+        <main>
+            <div class="page-content">
+                <div class="container-fluid mt-2">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </main>
+    </div>
+<app-footer></app-footer>

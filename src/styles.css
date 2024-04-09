@@ -29,14 +29,15 @@ body {
 header{
     background: #ffffff;
     padding: 1em 0;
-    text-align: center;
+    display: block !important;
 }
 
 .main {
     display: flex;
     flex: 1;
-    margin-left: 80px;
-    margin-right:80px;
+    margin-top: 0px !important;
+    margin-left: 40px;
+    margin-right:40px;
 }
 
 
@@ -56,17 +57,53 @@ footer {
     text-align: center;
 }
 
-.dropdown-toggle::after {
-    display:none;
+
+
+.navigation-drop{
+    margin-right: 30px;
 }
 
-@media all and (max-width: 550px) {
-    .main {
-        flex-direction: column;
-        margin-left: 0px !important;
-        margin-right:0px !important;
-    }
-    main {
- 
-    }
+.nav_icons{
+    margin-right: 30px;
 }
+    /* media query for adjusting Navbar */
+    @media all and (max-width: 550px) {
+        .main {
+            flex-direction: column;
+            margin-top: 10px !important;
+            margin-left: 0px !important;
+            margin-right:0px !important;
+        }
+ 
+        .logo{
+            display: none;
+        }
+        
+        .vl {
+            border-left: 1px solid rgb(194, 194, 194);
+            height: 40px;
+        }
+
+
+        .navigation_path{
+            flex-direction: column !important;
+            margin-left: 3px;
+        }
+    }
+
+
+    @media (min-width:375px){
+        .nav_properties{
+            margin-left: 100px !important;
+        }
+    }
+
+    @media (min-width:425px){
+        .nav_properties{
+            margin-left: 150px !important;
+        }
+    }
+
+
+
+

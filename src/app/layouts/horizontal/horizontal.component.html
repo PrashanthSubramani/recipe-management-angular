@@ -1,86 +1,88 @@
 <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand text-decoration ms-5" href="#">
-        <h4 class="ms-5"> <i class="fa fa-free-code-camp" aria-hidden="true"></i> Recipe</h4>
+    <a class="navbar-brand text-decoration ms-5 d-none d-lg-block d-md-block" href="#">
+        <h4> <i class="fa fa-free-code-camp" aria-hidden="true"></i> Recipe</h4>
     </a>
+    <div class="d-flex justify-content-between align-items-center nav_icons">
+        <!-- Menu Bar Icon with Toggle (Left Side) -->
+        <button class="navbar-toggler d-lg-none d-md-none ms-2" type="button" data-bs-toggle="collapse"  (click)="toggleTopbar()" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="d-flex justify-content-between me-5">
-        <div class="p-2 d-flex flex-row mb-3 gap-1">
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <!-- Space (Centered) -->
+        <div class="flex-grow-1"></div>
+
+        <!-- Dropdown Icons (Right Side) -->
+        <div class="d-flex flex-row gap-1 nav_properties">
+            <div class="dropdown mt-2">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-language" aria-hidden="true"></i>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><h6 class="dropdown-header">Choose Language</h6></li>
                     <li><a class="dropdown-item" href="#">Es</a></li>
                     <li><a class="dropdown-item" href="#">En</a></li>
                 </ul>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown mt-2">
                 <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-bell fa-1x"></i>
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Message</a></li>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><h6 class="dropdown-header">Notification</h6></li>
                 </ul>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown mt-2">
                 <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-moon-o fa-1x"></i>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><h6 class="dropdown-header">Choose Theme</h6></li>
                     <li><a class="dropdown-item" href="#">Light</a></li>
                     <li><a class="dropdown-item" href="#">Dark</a></li>
                 </ul>
             </div>
-        </div>
 
-        <div class="vl"></div>
-        <div class="me-5">
-            <!-- <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+            <div class="vl"></div>
+
+            <!-- User Image Dropdown -->
+            <div ngbdropdown="" class="header-item topbar-user dropdown ">
+                <button type="button" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    ngbdropdowntoggle="" class="dropdown-toggle btn">
+                    <span class="d-flex align-items-center">
+                        <img src="assets/images/user.jpg" alt="Header Avatar" class="rounded-circle header-profile-user" width="40"
+                            height="40">
+                        <span class="text-start ms-xl-2 ">
+                            <span class="d-none d-sm-inline-block ms-1 fw-medium user-name-text">Dirk Adame</span>
+                            <span class="d-none d-sm-block ms-1 fs-12 text-muted user-name-sub-text">User</span>
+                        </span>
+                    </span>
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"><i class="fa fa-shield" aria-hidden="true"></i> Change Password</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-                </ul>
-              </div> -->
-
-            <div ngbdropdown="" class="ms-sm-3 header-item topbar-user dropdown"><button type="button"
-                    id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    ngbdropdowntoggle="" class="dropdown-toggle btn"><span class="d-flex align-items-center"><img src="assets/images/user.jpg"
-                            alt="Header Avatar" class="rounded-circle header-profile-user" width="40" height="40"><span
-                            class="text-start ms-xl-2"><span
-                                class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Dirk Adame</span><span
-                                class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">User</span></span></span></button>
                 <div ngbdropdownmenu="" class="dropdown-menu dropdown-menu-end">
                     <h6 class="dropdown-header">Welcome Anna!</h6>
-                            <a href="javascript: void(0);" class="dropdown-item">
-                                <i class="fa fa-shield text-muted fs-16 align-middle me-1"></i>
-                                <span data-key="t-logout"class="align-middle">Change Password</span>
-                            </a>
-
-                            <a href="javascript: void(0);" class="dropdown-item">
-                                <i class="fa fa-sign-out text-muted fs-16 align-middle me-1"></i>
-                                <span data-key="t-logout"class="align-middle">Logout</span>
-                            </a>
+                    <a href="javascript: void(0);" class="dropdown-item">
+                        <i class="fa fa-shield text-muted fs-16 align-middle me-1"></i>
+                        <span data-key="t-logout" class="align-middle">Change Password</span>
+                    </a>
+                    <a href="javascript: void(0);" class="dropdown-item">
+                        <i class="fa fa-sign-out text-muted fs-16 align-middle me-1"></i>
+                        <span data-key="t-logout" class="align-middle">Logout</span>
+                    </a>
                 </div>
             </div>
-
         </div>
     </div>
 </nav>
 
+<!-- App Horizontal Topbar -->
+<app-horizontal-topbar  *ngIf="showTopbar" ></app-horizontal-topbar>
 
-
-
-
-<app-horizontal-topbar></app-horizontal-topbar>
 <div class="main">
     <main>
         <div class="page-content">
-            <div class="container-fluid mt-2">
+            <div class="container-fluid">
                 <router-outlet></router-outlet>
             </div>
         </div>

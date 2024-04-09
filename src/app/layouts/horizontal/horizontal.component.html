@@ -1,29 +1,89 @@
 <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand text-decoration ms-4" href="#">
-        <h4 class="ms-5"> <i class="fa fa-free-code-camp" aria-hidden="true"></i> Logo</h4>
+    <a class="navbar-brand text-decoration ms-5" href="#">
+        <h4 class="ms-5"> <i class="fa fa-free-code-camp" aria-hidden="true"></i> Recipe</h4>
     </a>
 
     <div class="d-flex justify-content-between me-5">
-        <div class="p-2">
-            <i class="fa fa-bell"></i> &nbsp;
-            <i class="fa fa-moon-o"></i> &nbsp;
+        <div class="p-2 d-flex flex-row mb-3 gap-1">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-language" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Es</a></li>
+                    <li><a class="dropdown-item" href="#">En</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-bell fa-1x"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Message</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-moon-o fa-1x"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Light</a></li>
+                    <li><a class="dropdown-item" href="#">Dark</a></li>
+                </ul>
+            </div>
         </div>
+
         <div class="vl"></div>
-        <div class="p-2 me-1">
-            Username
-        </div>
-    </div>
+        <div class="me-5">
+            <!-- <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="fa fa-shield" aria-hidden="true"></i> Change Password</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                </ul>
+              </div> -->
 
-</nav>
+            <div ngbdropdown="" class="ms-sm-3 header-item topbar-user dropdown"><button type="button"
+                    id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    ngbdropdowntoggle="" class="dropdown-toggle btn"><span class="d-flex align-items-center"><img src="assets/images/user.jpg"
+                            alt="Header Avatar" class="rounded-circle header-profile-user" width="40" height="40"><span
+                            class="text-start ms-xl-2"><span
+                                class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Dirk Adame</span><span
+                                class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">User</span></span></span></button>
+                <div ngbdropdownmenu="" class="dropdown-menu dropdown-menu-end">
+                    <h6 class="dropdown-header">Welcome Anna!</h6>
+                            <a href="javascript: void(0);" class="dropdown-item">
+                                <i class="fa fa-shield text-muted fs-16 align-middle me-1"></i>
+                                <span data-key="t-logout"class="align-middle">Change Password</span>
+                            </a>
 
-<app-horizontal-topbar></app-horizontal-topbar>
-    <div class="main">
-        <main>
-            <div class="page-content">
-                <div class="container-fluid mt-2">
-                    <router-outlet></router-outlet>
+                            <a href="javascript: void(0);" class="dropdown-item">
+                                <i class="fa fa-sign-out text-muted fs-16 align-middle me-1"></i>
+                                <span data-key="t-logout"class="align-middle">Logout</span>
+                            </a>
                 </div>
             </div>
-        </main>
+
+        </div>
     </div>
+</nav>
+
+
+
+
+
+<app-horizontal-topbar></app-horizontal-topbar>
+<div class="main">
+    <main>
+        <div class="page-content">
+            <div class="container-fluid mt-2">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </main>
+</div>
 <app-footer></app-footer>
